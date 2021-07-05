@@ -171,8 +171,8 @@ const shareScreen = () => {
 
 const setShareScreen = () => {
     const html = `
-      <i class="fab fa-creative-commons-share"></i>
-      <span>Share Screen</span>
+      <i style="color:rgb(255, 231, 71);" class="fab fa-creative-commons-share"></i>
+      <span style="color:rgb(255, 231, 71);">Share Screen</span>
     `
     document.querySelector('.main_share_button').innerHTML = html;
   }
@@ -185,7 +185,8 @@ const stopScreenShare = () =>   {
     sender.replaceTrack(videoTrack)
     
     const html = `
-    <i class="stop fab fa-creative-commons-share-slash"></i>
+    <i class="fab fa-creative-commons-share"></i>
+    <span>Share Screen</span>
     `
     document.querySelector('.main_share_button').innerHTML = html;
 }
