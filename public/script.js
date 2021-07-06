@@ -190,3 +190,14 @@ const stopScreenShare = () =>   {
     `
     document.querySelector('.main_share_button').innerHTML = html;
 }
+
+//leave meeting
+document.querySelector('.main_leave_button').addEventListener('click', () => {
+    const leaveRoom = confirm('Are you sure you want to leave the chatroom?');
+    if (leaveRoom) {
+    //   window.location = 'https://www.google.com';
+    // window.location = '../index.html';
+        window.location = close(); //some landing page needed.
+    } else {
+    }
+});
