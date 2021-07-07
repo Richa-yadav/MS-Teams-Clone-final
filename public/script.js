@@ -1,6 +1,3 @@
-// const Peer = require("peerjs");
-// const { text } = require("express");
-
 const socket = io('/');
 
 const videoGrid = document.getElementById('video-grid')
@@ -10,13 +7,14 @@ myVideo.muted = true;
 var peer = new Peer(undefined, {
     path: '/peerjs',
     host: '/',
-    port: '443'
-    // port: '3000'
+    // port: '443'
+    port: '3000'
 });
 
 var currentPeer;
 
 let myVideoStream
+//to access the audio and video of the user
 navigator.mediaDevices.getUserMedia({
     video: true,
     audio: true,
@@ -44,7 +42,6 @@ navigator.mediaDevices.getUserMedia({
 
     $('html').keydown((e) => {
         if(e.which == 13 && text.val().length !==0 ) {
-            // console.log(text.val())
             socket.emit('message', text.val());
             text.val('')
         }
@@ -60,11 +57,10 @@ navigator.mediaDevices.getUserMedia({
 
 peer.on('open', id => {
     socket.emit('join-room', ROOM_ID, id);
-
 })
 
 
-
+//new user connected
 const connectToNewUser = (userId, stream) => {
     const call = peer.call(userId, stream)
     const video = document.createElement('video')
@@ -74,7 +70,7 @@ const connectToNewUser = (userId, stream) => {
     })
 }
 
-
+//when we load all the data for a specific stream, we will be able to play the video
 const addVideoStream = (video, stream) => {
     video.srcObject = stream;
     video.addEventListener('loadedmetadata', () =>{
