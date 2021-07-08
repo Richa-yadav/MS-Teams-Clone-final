@@ -7,8 +7,8 @@ myVideo.muted = true;
 var peer = new Peer(undefined, {
     path: '/peerjs',
     host: '/',
-    // port: '443'
-    port: '3000'
+    port: '443'
+    // port: '3000'
 });
 
 var currentPeer;
@@ -47,9 +47,10 @@ navigator.mediaDevices.getUserMedia({
         }
     })
 
+    var x=1;
     socket.on('createMessage', message => {
         console.log("creates messages", message);
-        $('.messages').append(`<li class="message"><b>user</b><br/>${message}</li>`);
+        $('.messages').append(`<li class="message"><b>user ${x++}</b><br/>${message}</li>`);
         scrollToBottom()
     })
 })
