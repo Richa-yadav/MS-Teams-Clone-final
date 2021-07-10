@@ -1,0 +1,14 @@
+body {
+    background-image: linear-gradient(140deg, #eadedb 0%, #bc70a4 50%, #770707 75%);
+}
+div{
+    font-size: 4.5vh;
+    text-align: center;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    height: 14vh;
+    width: 45vh;
+    border: 15vh;
+    padding: 41.5vh;
+}
