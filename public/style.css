@@ -6,12 +6,13 @@ body {
 #video-grid {
     display: flex;
     justify-content: center;
+    flex-wrap: wrap;
 }
 
 
 video{
-    height: 200px;
-    width: 270px;
+    height: 40vh;
+    width: 50vh;
     object-fit: cover;
     padding: 5px;
     border-radius: 25px;
@@ -42,7 +43,7 @@ video{
 
 .main_controls {
     display: flex;
-    background-color: rgb(17, 16, 16);
+    background-color: rgb(34, 3, 53);
     color: #D2D2D2;
     padding: 5px;
     justify-content: space-between;
