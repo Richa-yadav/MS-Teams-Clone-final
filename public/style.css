@@ -14,6 +14,7 @@ video{
     width: 270px;
     object-fit: cover;
     padding: 5px;
+    border-radius: 25px;
 }
 
 .main {
@@ -33,7 +34,7 @@ video{
 
 .main_videos {
     flex-grow: 1;
-    background-color: rgb(99, 92, 92);
+    background-image: linear-gradient(140deg, #eadedb 0%, #bc70a4 50%, #d64141 75%);
     display: flex;
     justify-content: center;
     align-items: center;
@@ -66,7 +67,7 @@ video{
 }
 
 .main_controls_button:hover {
-    background-color: rgb(44, 78, 46);
+    background-color: rgb(33, 121, 6);
     border-radius: 5px;
 }
 
@@ -77,14 +78,14 @@ video{
 .main_right {
     display: flex;
     flex-direction: column;
-    background-color: rgb(29, 33, 37);
-    border-left: 1px solid #3d3d43;
+    background-color: #6b034a;
+    border-left: 0px solid #c1d7e2;
 }
 
 .main_header {
     color: snow;
     text-align: center;
-    margin: 10px;
+    margin: 15px;
 }
 
 .main_chat_window {
@@ -101,7 +102,7 @@ video{
     flex-grow: 1;
     background-color: transparent;
     border: none;
-    color: thistle;
+    color: white;
 }
 
 .messages {
