@@ -4,11 +4,5 @@ body {
 div{
     font-size: 4.5vh;
     text-align: center;
-    display: block;
-    margin-left: auto;
-    margin-right: auto;
-    height: 14vh;
-    width: 45vh;
-    border: 15vh;
-    padding: 41.5vh;
+    padding: 38vh;
 }
